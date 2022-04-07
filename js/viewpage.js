@@ -53,7 +53,7 @@ function ShowView() {
       sClickView = (doc.data().ClickView+1);
       sClickMemo = doc.data().ClickMemo;
       str += '<div style="margin-top:50px;background-color: #002d63;height: 250px; overflow: hidden;">';
-      str += '<center><img src="'+doc.data().SendImg+'" style="width:100%; max-width: 500px;"></center>';
+      str += '<center><img src="'+doc.data().SendImg+'" style="width:100%; max-width: 500px;max-hight:270px;"></center>';
       //str += '<div class="chart-clicklike">'+ sGetPicLike +'</div>';
       str += '<div class="chart-clicklike"><div id="DisplayShowLike"></div></div>';
       str += '</div>';
