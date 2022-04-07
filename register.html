@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LINE Retail Society</title>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PW7HPDW');</script>
+<!--
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css"> 
+    <link rel="stylesheet" href="./css/templatemo-ocean-vibes.css">
+-->
+    <link href="./img/favicom.ico" rel="icon">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./css/ekachon.css"> 
+    <link rel="stylesheet" href="./css/style.css"> 
+    <link rel="stylesheet" href="./css/w3.css"> 
+    <link rel="stylesheet" href="./css/button.css"> 
+    <link rel="stylesheet" href="./css/index@.css">
+    <script src="https://static.line-scdn.net/liff/edge/versions/2.12.0/sdk.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css" rel="stylesheet" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script type="text/javascript">
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();    
+    </script>
+
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" style="background: #fff;">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW7HPDW"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html" style="font-size: 13px;">LINE Retail Society</a>
+      </div>
+    </div>
+  </nav>
+
+  <div id="Loading" class="carousel slide text-center" data-ride="carousel" style="display: block;">
+    <div style="margin:40px auto;max-width:400px;" id="loading"><img src="./img/Material-Loading-Animation.gif" style="width:90%">
+      <div style="padding-top:15px;color:#f68b1f;">L o a d i n g</div>
+    </div>
+  </div>
+
+  <div id="myRegister" class="carousel slide text-center" data-ride="carousel" style="display: none;">
+    <div class="clr"></div>
+    <div class="form_wrapper">
+      <div class="form_container">
+        <div class="title_container">
+          <div class="title-head">LINE Retail Society</div>
+        </div>
+        <div class="row clearfix">
+          <div class="">
+            <center>
+              <div id="MyProfile"></div>
+            </center>
+            <form style="margin-top:20px;" class="needs-validation" novalidate>
+              <div class="form-row">
+                <div class="input_field" style="width:100% !important;"> 
+                  <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+                  <input required type="number" class="form-control" id="txtEmpID" placeholder="รหัสพนักงาน"/>
+                  <div class="valid-feedback"></div>
+                </div>
+                <div class="input_field" style="width:100% !important;"> 
+                  <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                  <input type="text" class="form-control" id="txtEmpName" placeholder="ชื่อ-นามสกุล" required/>
+                </div>
+                <div class="input_field" style="width:100% !important;"> 
+                  <span><i aria-hidden="true" class="fa fa-phone"></i></span>
+                  <input type="number" class="form-control" id="txtEmpPhone" placeholder="หมายเลขโทรศัพท์" required/>
+                </div>
+                <div class="input_field select_option">
+                  <select id="txtEmpGroup" class="form-control" style="font: 400 12px ekachon-regular !important;" required/>
+                    <option></option>
+                    <option value="ttb bank">พนักงาน ttb bank</option>
+                    <option value="OTHER-Outsider">บุคคลภายนอกธนาคาร</option>
+                  </select>
+                  <div class="select_arrow"></div>
+                </div>
+              </div>
+              <center>
+              <div style="font-weight: 600; color:#ff0000; padding:20px;width:100% !important;">
+                ขอสงวนสิทธิ์สำหรับผู้ที่มีส่วนเกี่ยวข้องเท่านั้น
+              </div>
+              </center>
+              <!--<button class="btn-t1" onclick="ClickSaveProfile()">ลงทะเบียน</button>-->
+              <div class="btn-t1" onclick="ClickSaveProfile()" type="submit">ลงทะเบียน</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="myTimer" class="carousel slide text-center" data-ride="carousel" style="display: none;">
+    <div class="clr"></div>
+    <div class="form_wrapper">
+      <div class="form_container">
+        <div class="title_container">
+          <div class="title-head">แจ้งสิทธิ์การเข้าถึงข้อมูล</div>
+        </div>
+        <div class="clearfix" style="margin:10px 0 20px 0;">
+          <div id="MyWating"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="WaitingPage" class="carousel slide text-center" data-ride="carousel" style="display: none;">
+    <div class="clr"></div>
+    <div class="form_wrapper">
+      <div class="form_container">
+        <div class="title_container">
+          <div class="title-head">คุณไม่ได้รับสิทธิ์ให้เข้าใช้งาน</div>
+        </div>
+        <div class="clearfix" style="margin:10px 0 20px 0;">
+          <div id="MyWatingPage"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div id="id01" class="w3-modal w3-animate-opacity" style="z-index: 20;">
+    <div class="w3-modal-content w3-card-4" style="background: #fff;">
+      <div class="w3-container" style="min-height:300px;padding:24px;width:100%;text-align:center;">
+          <div id="MyProfile"></div>
+          <div class="btn-t2" onclick="CloseAll()" style="margin-top:20px;">ปิดหน้าต่างนี้</div>
+          <div style="height: 15px;"></div>
+        </center>
+      </div>
+    </div>
+    <div style="height:40px;"></div>
+  </div>
+
+
+
+  <div id="id02" class="w3-modal w3-animate-opacity" style="z-index: 20;">
+    <div class="w3-modal-content w3-card-4" style="background: #e3e3e3;max-width:400px;">
+      <div class="w3-container" style="min-height:300px;padding:24px;width:100%;text-align:center;">
+          <div id="WelcomePage"></div>
+        </center>
+      </div>
+    </div>
+    <div style="height:40px;"></div>
+  </div>
+
+  <div class="clr"></div>
+  <div id="isLoggedIn" style="color:#ffffff;"></div>
+  <footer class="container-fluid text-center">
+    <a href="#myPage" title="To Top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+    <div style="font-size:12px;font-weight: 600;margin-bottom: 20px;">@<font color="green">LINE</font> <font color="#002d63">Retail</font> 
+      <font color="#0056ff">So</font><font color="#f68b1f">ciety</font></div>
+  </footer>
+
+
+<script src="./js/register.js?v=0001"></script>
+<script src='https://use.fontawesome.com/4ecc3dbb0b.js'></script>
+
+</body>
+</html>

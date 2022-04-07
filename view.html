@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>LINE Retail Society</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-PW7HPDW');</script>
+  <!-- End Google Tag Manager -->
+  <link href="./img/favicom.ico" rel="icon">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href='css/ekachon.css' rel="stylesheet" type="text/css">
+  <link href='css/button.css' rel="stylesheet" type="text/css">
+  <link href='css/style.css' rel="stylesheet" type="text/css">
+  <link href='css/vdo.css' rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link href='css/w3.css' rel="stylesheet" type="text/css">
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PW7HPDW"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <div class="navbar1">
+    <center>
+      <div style="max-width:400px;">
+        <div class="iconlink" onClick="window.location='index.html';">
+          <div style="width:28px;"><img src="./img/home.png" style="width:22px;"></div>
+          <div style="font-size: 11px;">หน้าแรก</div>
+        </div>
+        <div class="iconlink" onClick="window.location='display.html';" style="background-color: #002d63;">
+          <div style="width:28px;"><img src="./img/family.png" style="width:22px;"></div>
+          <div style="font-size: 11px;">รูปประกวด</div>
+        </div>
+        <div class="iconlink" onClick="window.location='photo.html';">
+          <div style="width:28px;"><img src="./img/photo.png" style="width:22px;"></div>
+          <div style="font-size: 11px;">ส่งภาพ</div>
+        </div>
+        <div class="iconlink" onClick="window.location='detail.html';">
+          <div style="width:28px;"><img src="./img/detail.png" style="width:22px;"></div>
+          <div style="font-size: 11px;">รายละเอียด</div>
+        </div>
+      </div>
+    </center>
+  </div>
+
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#myPage" onclick="location.href='index.html'" style="font-size: 13px;">LINE Retail Society</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index.html">สื่อวิดีโอ</a></li>
+          <li><a href="learning.html">Leaning</a></li>
+          <li><a href="training.png">Training</a></li>
+          <li><a href="search.html">ค้นหาสื่อ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <div id="ImgVDO"></div>
+    <!--
+    <div style="margin-top:50px;background-color: #002d63;height: 270px; overflow: hidden;">
+      <img src="./pic/group5.jpg" style="width:100%; max-width: 500px;">
+    </div>
+    -->
+  </div>
+
+  <main id="main">
+    <section id="team" class="team section-bg">
+      <div class="container">
+        <div style="text-align: left; margin-top:15px;">
+          <div id="NameVDO"></div>
+          <div id="DetailVDO"></div>
+          <div id="SocialICON"></div>
+        </div>
+        <div class="row" style="margin-top:20px;">
+          <div id="DisplayVDOgroup"></div>
+        </div>
+        <div class="clr"></div>
+      </div>
+    </section>
+    <div class="clr"></div>
+  </main>
+  <!-- End #main -->
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <div style="font-size:12px;font-weight: 600;">@<font color="green">LINE</font> <font color="#002d63">Retail</font> 
+    <font color="#0056ff">So</font><font color="#f68b1f">ciety</font></div>
+    <div class="clr" style="height: 40px;"></div>
+</footer>
+
+
+<script src="./js/learning-group.js"></script>
+</body>
+</html>
