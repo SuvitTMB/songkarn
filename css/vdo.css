@@ -890,7 +890,8 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 */
 
 .chart-clicklike {
-  /*max-width: 450px; margin:-70px auto 10px; width:100%; */
-  max-width: 450px; margin:-80px auto 10px; width:100%; 
+  /*max-width: 450px; margin:-70px auto 10px; width:100%; 
+  max-width: 450px; margin:-80px auto 10px; width:100%; */
+  max-width: 450px; margin:-90px auto 5px; width:100%;
 }
 
