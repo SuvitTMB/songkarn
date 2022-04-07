@@ -67,8 +67,8 @@ function Connect_DB() {
   firebase.initializeApp(firebaseConfig);
   dbCheckProfile = firebase.firestore().collection("CheckProfile");
   dbSongkarn = firebase.firestore().collection("Songkarn");
-  ShowIMG();
   CheckProfile();
+  ShowIMG();
 }
 
 
