@@ -16,8 +16,8 @@ $(document).ready(function () {
   str += '<div class="NameLine">'+ sessionStorage.getItem("LineName")+'</div>';
   Connect_DB();
 */
-
-  main()
+Connect_DB();
+  //main()
 
 });
 
