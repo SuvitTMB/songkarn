@@ -885,12 +885,12 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 
 /*
 .chart-clicklike {
-  max-width: 450px; margin:-280px auto 5px; width:100%; top:20;
-  /*text-align:right; max-width: 450px; margin:-80px auto 5px; */
+    text-align:right; max-width: 450px; margin:-80px auto 5px; 
 }
 */
 
 .chart-clicklike {
-  max-width: 450px; margin:-70px auto 10px; width:100%; 
+  /*max-width: 450px; margin:-70px auto 10px; width:100%; */
+  max-width: 450px; margin:-280px auto 5px; width:100%; top:20;
 }
 
