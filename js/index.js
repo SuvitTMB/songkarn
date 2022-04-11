@@ -2,7 +2,7 @@ var dateString = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta' }
 $(document).ready(function () {
 Connect_DB();
 });
-function Connect_DB() {
+function Connect_DB() { 
   var firebaseConfig = {
     apiKey: "AIzaSyDfTJJ425U4OY0xac6jdhtSxDeuJ-OF-lE",
     authDomain: "retailproject-6f4fc.firebaseapp.com",
