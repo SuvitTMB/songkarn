@@ -64,5 +64,5 @@ function GotoViewAll() {
   location.href = "viewall.html";
 }
 function CloseAll() {
-  document.getElementById('id01').style.display='none';
+  document.getElementById('id01').style.display='none'; 
 }
