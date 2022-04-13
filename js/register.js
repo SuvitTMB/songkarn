@@ -118,6 +118,7 @@ function ClickSaveProfile() {
   if(stxtEmpName !== null && stxtEmpName !== '') { sCheckBottom = sCheckBottom+1; }
   if(stxtEmpPhone !== null && stxtEmpPhone !== '') { sCheckBottom = sCheckBottom+1; }
   if(stxtEmpGroup !== null && stxtEmpGroup !== '') { sCheckBottom = sCheckBottom+1; }
+  alert(sCheckBottom);
   if(sCheckBottom==4) {
     //SaveData();
     dbProfile.add({
