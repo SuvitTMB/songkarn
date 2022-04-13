@@ -4,7 +4,7 @@ var dateString = new Date().toLocaleString('en-US', { timeZone: 'Asia/Jakarta' }
 $(document).ready(function () {
   if(sessionStorage.getItem("EmpID")==null) { location.href = "index.html"; }
   Connect_DB();
-});
+}); 
 
 function Connect_DB() {
   var firebaseConfig = {
