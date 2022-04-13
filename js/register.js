@@ -119,14 +119,20 @@ function ClickSaveProfile() {
   if(stxtEmpPhone !== null && stxtEmpPhone !== '') { sCheckBottom = sCheckBottom+1; }
   if(stxtEmpGroup !== null && stxtEmpGroup !== '') { sCheckBottom = sCheckBottom+1; }
   alert(stxtEmpID+"\n\n"+stxtEmpName+"\n\n"+stxtEmpPhone+"\n\n"+stxtEmpGroup+"\n\n"+sCheckBottom+"===="+sessionStorage.getItem("LineID"));
-  //if(sCheckBottom==4) {
-    //SaveData();
+  if(sCheckBottom==4) {
+    SaveLine();
+  } else {
+    alert("คุณยังกรอกข้อมูลไม่ครบถ้วน");
+  }
+}
+
+
+function SaveLine() {
     dbProfile.add({
       lineID : sessionStorage.getItem("LineID"),
       linename : sessionStorage.getItem("LineName"),
       linePicture : sessionStorage.getItem("LinePicture"),
       empPicture : sessionStorage.getItem("LinePicture"),
-      /*
       empID : document.getElementById("txtEmpID").value,
       empName : document.getElementById("txtEmpName").value,
       empPhone : document.getElementById("txtEmpPhone").value,
@@ -137,15 +143,10 @@ function ClickSaveProfile() {
       statuspass : 0,
       memo : eSpace,
       empAddress : eSpace,
-      */
       DateRegister : dateString
     });
-    GotoLink();
-  //} else {
-  //  alert("กรุณากรอกข้อมูลให้ครบถ้วน");
-  //}
+    GotoLink();  
 }
-
 
 function GotoLink() {
   location.href = "index.html";
