@@ -118,7 +118,7 @@ function ClickSaveProfile() {
   if(stxtEmpName !== null && stxtEmpName !== '') { sCheckBottom = sCheckBottom+1; }
   if(stxtEmpPhone !== null && stxtEmpPhone !== '') { sCheckBottom = sCheckBottom+1; }
   if(stxtEmpGroup !== null && stxtEmpGroup !== '') { sCheckBottom = sCheckBottom+1; }
-  alert(sCheckBottom+"===="+sessionStorage.getItem("LineID"));
+  alert(stxtEmpID+"\n\n"+stxtEmpName+"\n\n"+stxtEmpPhone+"\n\n"+stxtEmpGroup+"\n\n"+sCheckBottom+"===="+sessionStorage.getItem("LineID"));
   if(sCheckBottom==4) {
     //SaveData();
     dbProfile.add({
