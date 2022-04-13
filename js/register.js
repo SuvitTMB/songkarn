@@ -106,10 +106,6 @@ function CheckData() {
 
 var sCheckBottom = 0;
 function ClickSaveProfile() {
-  NewDate();
-  var eSpace = "";
-  var eEmpGroup = "other";
-  sCheckBottom = 0;
   stxtEmpID = document.getElementById("txtEmpID").value;
   stxtEmpName = document.getElementById("txtEmpName").value;
   stxtEmpPhone = document.getElementById("txtEmpPhone").value;
@@ -128,24 +124,28 @@ function ClickSaveProfile() {
 
 
 function SaveLine() {
-    dbProfile.add({
-      lineID : sessionStorage.getItem("LineID"),
-      linename : sessionStorage.getItem("LineName"),
-      linePicture : sessionStorage.getItem("LinePicture"),
-      empPicture : sessionStorage.getItem("LinePicture"),
-      empID : document.getElementById("txtEmpID").value,
-      empName : document.getElementById("txtEmpName").value,
-      empPhone : document.getElementById("txtEmpPhone").value,
-      empRH : document.getElementById("txtEmpGroup").value,
-      empBr : eEmpGroup,
-      statusconfirm : 2,
-      statusedit : 1,
-      statuspass : 0,
-      memo : eSpace,
-      empAddress : eSpace,
-      DateRegister : dateString
-    });
-    GotoLink();  
+  NewDate();
+  var eSpace = "";
+  var eEmpGroup = "other";
+  sCheckBottom = 0;
+  dbProfile.add({
+    lineID : sessionStorage.getItem("LineID"),
+    linename : sessionStorage.getItem("LineName"),
+    linePicture : sessionStorage.getItem("LinePicture"),
+    empPicture : sessionStorage.getItem("LinePicture"),
+    empID : document.getElementById("txtEmpID").value,
+    empName : document.getElementById("txtEmpName").value,
+    empPhone : document.getElementById("txtEmpPhone").value,
+    empRH : document.getElementById("txtEmpGroup").value,
+    empBr : eEmpGroup,
+    statusconfirm : 2,
+    statusedit : 1,
+    statuspass : 0,
+    memo : eSpace,
+    empAddress : eSpace,
+    DateRegister : dateString
+  });
+  GotoLink();  
 }
 
 function GotoLink() {
