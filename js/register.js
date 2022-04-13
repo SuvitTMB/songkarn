@@ -119,7 +119,7 @@ function ClickSaveProfile() {
   if(stxtEmpPhone !== null && stxtEmpPhone !== '') { sCheckBottom = sCheckBottom+1; }
   if(stxtEmpGroup !== null && stxtEmpGroup !== '') { sCheckBottom = sCheckBottom+1; }
   alert(stxtEmpID+"\n\n"+stxtEmpName+"\n\n"+stxtEmpPhone+"\n\n"+stxtEmpGroup+"\n\n"+sCheckBottom+"===="+sessionStorage.getItem("LineID"));
-  if(sCheckBottom==4) {
+  //if(sCheckBottom==4) {
     //SaveData();
     dbProfile.add({
       lineID : sessionStorage.getItem("LineID"),
@@ -141,9 +141,9 @@ function ClickSaveProfile() {
       DateRegister : dateString
     });
     GotoLink();
-  } else {
-    alert("กรุณากรอกข้อมูลให้ครบถ้วน");
-  }
+  //} else {
+  //  alert("กรุณากรอกข้อมูลให้ครบถ้วน");
+  //}
 }
 
 
