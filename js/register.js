@@ -126,6 +126,7 @@ function ClickSaveProfile() {
       linename : sessionStorage.getItem("LineName"),
       linePicture : sessionStorage.getItem("LinePicture"),
       empPicture : sessionStorage.getItem("LinePicture"),
+      /*
       empID : document.getElementById("txtEmpID").value,
       empName : document.getElementById("txtEmpName").value,
       empPhone : document.getElementById("txtEmpPhone").value,
@@ -136,6 +137,7 @@ function ClickSaveProfile() {
       statuspass : 0,
       memo : eSpace,
       empAddress : eSpace,
+      */
       DateRegister : dateString
     });
     GotoLink();
