@@ -122,12 +122,18 @@ function ClickSaveProfile() {
   }
 }
 
- 
+
 function SaveLine() {
-  NewDate();
   var eSpace = "";
   var eEmpGroup = "other";
-  sCheckBottom = 0;
+  NewDate();
+  var TimeStampDate = Math.round(Date.now() / 1000);
+  sDateTime = dateString;
+  sessionStorage.setItem("CheckPass", sDateTime);
+  if(document.getElementById("txtEmpGroup").value!="OTHER") {
+    eEmpGroup = "BBD";
+  } 
+/*
   dbProfile.add({
     lineID : sessionStorage.getItem("LineID"),
     linename : sessionStorage.getItem("LineName"),
@@ -145,6 +151,25 @@ function SaveLine() {
     empAddress : eSpace,
     DateRegister : dateString
   });
+*/
+  dbProfile.add({
+    lineID : sessionStorage.getItem("LineID"),
+    linename : sessionStorage.getItem("LineName"),
+    empPicture : sessionStorage.getItem("LinePicture"),
+    empID : document.getElementById("txtEmpID").value,
+    empName : document.getElementById("txtEmpName").value,
+    empRH : document.getElementById("txtEmpGroup").value,
+    empPhone : document.getElementById("txtEmpPhone").value,
+    empBr : eEmpGroup,
+    statusconfirm : 2,
+    statusedit : 1,
+    statuspass : 0,
+    memo : eSpace,
+    empAddress : eSpace,
+    DateRegister : dateString
+  });
+
+
   GotoLink();  
 }
 
