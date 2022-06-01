@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - CountDown Timer Javascript</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+  <title>CountDown Timer</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="countdown-title">BM Campus</div>
+    <!-- form -->
+    <!-- countdown text -->
+    <p class="countdown">00 : 00 : 00</p>
+    <!-- buttons -->
+    <div class="buttons">
+      <button class="stop-btn" disabled>STOP</button>
+      <button class="reset-btn" disabled>RESET</button>
+    </div>
+
+    <form class="form" id="StartTime" style="height:80px;">
+      <!-- countdown time input field -->
+      <input type="number" min="1" class="time-input" placeholder="Enter Countdown">
+      <!-- options -->
+      <select name="format">
+        <option value="hours">Hours</option>
+        <option value="minutes">Minutes</option>
+        <option value="seconds">Seconds</option>
+      </select>
+      <!-- submit button or set button -->
+      <button type="submit" class="set-btn">SET</button>
+    </form>
+  </div>
+
+  <!--<script type="text/javascript" src="js/script.js"></script>-->
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
